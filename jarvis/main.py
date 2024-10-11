@@ -7,7 +7,7 @@ import musiclibrary  # Ensure this module exists
 # Initialize the speech engine
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
-newsapi = "4a5074ddd55e4eb0899301b46e80a453"
+#newsapi = "your news api key"
 
 def speak(text):
     """Function to convert text to speech."""
