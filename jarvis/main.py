@@ -1,4 +1,4 @@
-import speech_recognition as sr
+'''import speech_recognition as sr
 import webbrowser
 import pyttsx3
 import requests  # Imported requests for making API calls
@@ -7,7 +7,7 @@ import musiclibrary  # Ensure this module exists
 # Initialize the speech engine
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
-newsapi = ""
+newsapi = "4a5074ddd55e4eb0899301b46e80a453"
 
 def speak(text):
     """Function to convert text to speech."""
@@ -38,7 +38,7 @@ def processCommand(c):
             speak(f"Sorry, I couldn't find the song {song}")
     elif "news" in c.lower():
         try:
-            r = requests.get(f"news api link")
+            r = requests.get(f"https://newsapi.org/v2/top-headlines?country=us&apiKey={newsapi}")
             if r.status_code == 200:
                 data = r.json()
                 articles = data.get('articles', [])
@@ -84,3 +84,4 @@ if __name__ == "__main__":
             print(f"Error with the request: {e}")
         except Exception as e:
             print(f"An error occurred: {e}")
+'''
