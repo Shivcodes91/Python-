@@ -1,4 +1,4 @@
-'''import speech_recognition as sr
+import speech_recognition as sr
 import webbrowser
 import pyttsx3
 import requests  # Imported requests for making API calls
@@ -7,7 +7,7 @@ import musiclibrary  # Ensure this module exists
 # Initialize the speech engine
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
-newsapi = "4a5074ddd55e4eb0899301b46e80a453"
+newsapi = "you secret key"
 
 def speak(text):
     """Function to convert text to speech."""
@@ -84,4 +84,3 @@ if __name__ == "__main__":
             print(f"Error with the request: {e}")
         except Exception as e:
             print(f"An error occurred: {e}")
-'''
