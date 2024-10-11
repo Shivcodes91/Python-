@@ -3,7 +3,7 @@ import webbrowser
 import pyttsx3
 import requests
 import os  # To access environment variables
-import musiclibrary  # Ensure this module exists
+#import musiclibrary  # Ensure this module exists
 
 # Initialize the speech engine
 recognizer = sr.Recognizer()
@@ -31,14 +31,7 @@ def processCommand(c):
     elif "open youtube" in c.lower():
         webbrowser.open("https://youtube.com")
         speak("Opening YouTube")
-    elif c.lower().startswith("play"):
-        song = c.lower().split(" ")[1]
-        link = musiclibrary.music.get(song, None)
-        if link:
-            webbrowser.open(link)
-            speak(f"Playing {song}")
-        else:
-            speak(f"Sorry, I couldn't find the song {song}")
+    #import music ang give conditions accordingly
     elif "news" in c.lower():
         try:
             if not newsapi:
